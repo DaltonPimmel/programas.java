@@ -1,5 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * To change this license header, choose License Headers in Project Properties
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -48,12 +48,19 @@ static void imprimeLivros(livro livro){
         
         recebe(livro);
         imprimeLivros(livro);
+        
+        livro f1; // objeto do tipo livro;
+        f1 = new livro();  // criando objeto e resenvendo memoria (new) do tipo livro.
+        // por padrão objetos sem atribuição recebem null para string e 0 para int.
+        System.out.println(f1.autor);   // imprime null; nao tem nenhuma atribuiçao.
+        System.out.println(f1.editora);
+        System.out.println(f1.paginas); // imprime 0;
     }
 
     
 }
 
-  
+// parecido com structs em c.
 class aluno{
     int idade;
     String nome;
@@ -63,6 +70,7 @@ class livro{
     String autor;
     String editora;
     int paginas;
+   
 }
 
  

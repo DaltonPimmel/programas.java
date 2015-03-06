@@ -10,14 +10,8 @@ class main{
 		a.compri = ent.nextDouble();
 		System.out.println("Informe a altura do triangulo: ");
 		a.altura = ent.nextDouble();
-		a.Raio(a.compri, a.altura);
+		a.Raio(a.compri, a.altura); // chama o metodo Raio 
 		
-		
-		
-		
-		
-	//	System.out.println("Raio do tringulo: " + a.Raio(a.compri, a.altura));
-	//	System.out.println("Perimetro do tringulo: " + a.Perimetro(a.compri, a.altura));
 		
 	}
 }

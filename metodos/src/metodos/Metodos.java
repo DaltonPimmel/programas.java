@@ -9,12 +9,12 @@ package metodos;
 public class Metodos {
 
    
-static aluno imprimir(aluno teste){
+static aluno imprimir(Aluno aluno){
    //teste = new aluno();
-    teste.idade = 10;
-    teste.nome = "teste";
-    System.out.println(teste.idade);        // 10
-    System.out.println(teste.nome);         //teste
+    aluno.idade = 10;
+    aluno.nome = "teste";
+    System.out.println(aluno.idade);        // 10
+    System.out.println(aluno.nome);         //teste
     return null;
 }
 
@@ -35,16 +35,16 @@ static void imprimeLivros(livro livro){
     
       
     public static void main(String[] args) {
-        aluno teste1 = new aluno(); // crição de um objeto do tipo aluno.
+        Aluno aluno = new Aluno(); // crição de um objeto do tipo aluno.
         livro livro = new livro();  // criação de novo objeto do tipo livro
 
-        teste1.idade = 20;
-        teste1.nome = "teste2";
-        imprimir(teste1);
+        aluno.idade = 20; // na classe aluno se criar a variavel idade como private não sera poivel usar em outras classes.
+        aluno.nome = "teste2";
+        imprimir(aluno); // chamada do metodo imprime, mandando o objeto aluno, que pertence a classe Aluno.
         // apos o retorno da função, ele volta com o valor que foi alterado na funcao, ira imprimir duas vezes 10, teste; mesmo retornando null da função.
         // Ele passa para a função como se fosse o endereço, um ponteiro.
-        System.out.println(teste1.idade);       // 10
-        System.out.println(teste1.nome);        // teste
+        System.out.println(aluno.idade);       // 10
+        System.out.println(aluno.nome);        // teste
         
         recebe(livro);
         imprimeLivros(livro);
@@ -55,14 +55,27 @@ static void imprimeLivros(livro livro){
         System.out.println(f1.autor);   // imprime null; nao tem nenhuma atribuiçao.
         System.out.println(f1.editora);
         System.out.println(f1.paginas); // imprime 0;
+        
+        funcionarios func = new funcionarios();
+        func.numeroFuncionarios++;
+        System.out.println(func.numeroFuncionarios);
+        
+        System.out.println();  // imprime uma linha em branco.
+        
+        funcionarios.colaboradores teste2;
+      
+       
+       
     }
 
     
 }
 
 // parecido com structs em c.
-class aluno{
-    int idade;
+class Aluno{
+   int idade;
+   //private int idade;  //Se deixar desta forma a variavel não sera visivel para outras classe, somente pela classe aluno. As outras variveis que não estão marcado com provate 
+   //poderam ser acessado normalmente.
     String nome;
 }
 
@@ -73,4 +86,12 @@ class livro{
    
 }
 
+class funcionarios{
+    int numeroFuncionarios;
+    
+    class colaboradores{
+        int teste;
+    }
+
+}
  

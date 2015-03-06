@@ -2,7 +2,7 @@ class raio{
 		public double altura;
 		public double compri;	
 	
-		static void Raio(double area, double altura){   // metodo para calcular o raio e o perimetro
+		static void Calcula(double area, double altura){   // metodo para calcular o raio e o perimetro
 			double r, p;
 			r = (area * altura) / 2;
 			p = 2 * (area * altura);

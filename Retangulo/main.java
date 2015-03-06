@@ -10,7 +10,7 @@ class main{
 		a.compri = ent.nextDouble();
 		System.out.println("Informe a altura do triangulo: ");
 		a.altura = ent.nextDouble();
-		a.Raio(a.compri, a.altura); // chama o metodo Raio 
+		a.Calcula(a.compri, a.altura); // chama o metodo Raio 
 		
 		
 	}

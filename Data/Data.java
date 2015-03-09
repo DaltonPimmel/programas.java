@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Data{
 	
 	private int dia;   // atributos da classe
-	private int mes;
+	private int mes;	// private, so pode ser alterado somente dentro da classe.
 	private int ano;
 	
 	public Data(){ // recebe valores por padrão.
